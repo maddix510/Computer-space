@@ -1,13 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Computer Space Remake</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-        <script src="game.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Computer Space — Remake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div id="topbar">
+      <div id="score">SCORE: 0</div>
+      <div id="lives">LIVES: 3</div>
+      <div id="highscore">HIGH: 0</div>
+    </div>
+
+    <canvas id="screen" width="900" height="600"></canvas>
+
+    <div id="overlay" class="visible">
+      <h1>COMPUTER SPACE</h1>
+      <p id="subtitle">A 1971 arcade inspired remake</p>
+      <div class="controls">
+        <p>Controls:</p>
+        <p>← → : Rotate &nbsp; • &nbsp; ↑ : Thrust &nbsp; • &nbsp; Space : Fire</p>
+      </div>
+      <div class="buttons">
+        <button id="startBtn">START</button>
+        <button id="howBtn">HOW TO PLAY</button>
+      </div>
+      <div id="how" style="display:none; margin-top:12px; max-width:540px; text-align:left;">
+        <p>Survive waves of alien saucers. Shoot them to score points. Colliding costs a life. Game ends at 0 lives.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/game.js"></script>
+</body>
 </html>
